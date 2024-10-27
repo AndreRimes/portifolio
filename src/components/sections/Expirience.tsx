@@ -18,7 +18,7 @@ const Exp = ({ exp }: { exp: ExpType }) => {
     const { lang } = useLang();
 
     return (
-        <div className="w-full flex flex-col gap-5 ">
+        <div key={exp.name} className="w-full flex flex-col gap-5 ">
 
             <div className="w-[90%] flex items-center justify-between">
                 <Revel>
@@ -49,7 +49,7 @@ const Exp = ({ exp }: { exp: ExpType }) => {
                 <div className="flex gap-4">
                     {exp.stack.map((skill, index) => {
                         return (
-                            <Badge className="w-fit text-lg" >{skill}</Badge>
+                            <Badge key={index} className="w-fit text-lg" >{skill}</Badge>
                         )
                     })}
                 </div>

@@ -4,7 +4,6 @@ import ExternalLink from "@/icons/link"
 import Image from "next/image"
 import { Revel } from "../Revel"
 import Link from "next/link"
-import { motion } from 'framer-motion';
 
 export type ProjectType = {
   title: string
