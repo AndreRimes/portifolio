@@ -1,13 +1,13 @@
 stop:
 
-	docker rm -f portfolio || true
+	sudo docker rm -f portfolio || true
 
 build:
 
-	docker build -t portfolio .	
+	sudo docker build -t portfolio .	
 
 run: 
 
-	docker run -p 3000:3000 --name portfolio portfolio	
+	sudo docker run -p 3000:3000 --name portfolio portfolio	
 
 .PHONY: build run stop
