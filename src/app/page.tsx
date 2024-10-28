@@ -18,11 +18,11 @@ export default function Home() {
           <Hero />
         </div>
 
-        <div className="h-[90vh]" >
+        <div className="min-h-[90vh]" >
           <About />
         </div>
 
-        <div className="min-h-[90vh " >
+        <div className="min-h-[90vh] " >
           <Projects projects={projects} />
         </div>
 

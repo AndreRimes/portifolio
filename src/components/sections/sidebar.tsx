@@ -33,12 +33,12 @@ function HorizontalBar() {
             initial="hidden"
             animate="variants"
             className="w-screen flex items-center justify-between p-5 fixed z-10">
-            <div className="flex items-center justify-center gap-10 basis-[16%] px-20">
-                <Linkedin />
+            <div className="flex items-center justify-center gap-10 basis-[16%] md:px-20">
+                <Linkedin clasName="" />
                 <Github />
             </div>
 
-            <div className="flex items-center  justify-evenly basis-1/4">
+            <div className="flex items-center justify-evenly gap-2 basis-1/2 md:basis-1/4">
                 <Link
                     href={"https://drive.google.com/file/d/1_lPGfAz602WG2xaLqollhH6Z5PRJ4mDD/view?usp=sharing"}
                     target="_blank"
@@ -47,7 +47,7 @@ function HorizontalBar() {
                 </Link>
 
                 <Select onValueChange={(value) => value === "portuguese" ? setLang(true) : setLang(false)} defaultValue="english">
-                    <SelectTrigger className="w-[180px]">
+                    <SelectTrigger className=" md:w-[180px]">
                         <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
@@ -117,7 +117,7 @@ function VerticalBar() {
             }}
             initial="hidden"
             animate="variants"
-            className="flex flex-col w-[5%] h-full bg-black items-center gap-4 py-2 fixed z-50" >
+            className="md:flex flex-col w-[5%] h-full bg-black items-center gap-4 py-2 fixed z-50 hidden" >
             <div
                 onClick={heroScroll}
                 className="cursor-pointer bg-[#111111] rounded-xl w-16 h-16 text-xl flex items-center justify-center p-0 font-extrabold">

@@ -19,7 +19,7 @@ const Project = ({project}: { project: ProjectType }) => {
   const { lang } = useLang();
 
   return (
-    <div className="w-[85%] min-h-[500px] h-[70%] flex flex-col gap-4">
+    <div className=" w-[85%] min-h-[500px] h-[70%] flex flex-col gap-4">
       <div className="w-full h-[100%] bg-[#232323] rounded-2xl relative">
         <Link href={project.externalLink ?? project.gitHubLink ?? "#"}>
           <Image
@@ -65,18 +65,19 @@ export default function Projects({ projects }: { projects: ProjectType[] }) {
   const { lang } = useLang();
 
   return (
-    <div id="projects" className="min-h-full flex flex-col items-center justify-center gap-6">
-      <div className="w-2/3 flex items-center gap-4"> 
-        <div className="w-2/3 bg-[#313233] h-[2px]"></div>
-        <h1 className="font-black text-7xl">
+    <div id="projects" className="min-h-full w-full flex flex-col items-center justify-center gap-6">
+
+      <div className="w-full px-4 md:px-0 md:w-2/3 flex items-center gap-4"> 
+        <div className="w-[50%] md:w-2/3 bg-[#313233] h-[2px]"></div>
+        <h1 className="font-black text-5xl md:text-7xl">
           {!lang ? "Projects" : "Projetos"}
           <span className="text-primary">.</span>
         </h1>
       </div>
 
 
-      <div className="w-2/3">
-        <div className="w-full h-full grid grid-cols-2  gap-5">
+      <div className="w-full md:w-2/3 px-4">
+        <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-5">
           {projects.map((project, index) => (
             <Project key={index} project={project} />
           ))}

@@ -17,18 +17,18 @@ export default function About() {
     return (
         <div id="about" className="flex flex-col items-center justify-center gap-6 ">
 
-            <div className="w-2/3 flex items-center gap-4">
+            <div className="md:w-2/3 md:px-0 px-4 w-full flex items-center gap-4">
                 <Revel>
-                    <h1 className="font-black text-7xl">
+                    <h1 className="font-black text-5xl md:text-7xl">
                         About
                         <span className="text-primary">.</span>
                     </h1>
                 </Revel>
-                <div className="w-2/3 bg-[#313233] h-[2px]"></div>
+                <div className="w-[55%] md:w-2/3 bg-[#313233] h-[2px]"></div>
             </div>
 
-            <div className="w-2/3 flex flex-row gap-20">
-                <div className="w-1/2 flex flex-col gap-5">
+            <div className="md:w-2/3 md:px-0 px-5 w-full flex flex-col md:flex-row gap-20">
+                <div className="w-full md:w-1/2 flex flex-col gap-5">
                     <Revel>
                         <p className="font-extralight text-xl">
                             {
@@ -84,7 +84,7 @@ export default function About() {
 
                 </div>
 
-                <div className="w-1/2 flex flex-col gap-20">
+                <div className="w-full md:w-1/2 flex flex-col gap-20">
                     <Revel>
                         <div className="flex flex-col gap-4">
                             <div className="flex items-center flex-row gap-3 text-2xl font-bold">
