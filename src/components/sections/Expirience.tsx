@@ -46,7 +46,7 @@ const Exp = ({ exp }: { exp: ExpType }) => {
             </Revel>
 
             <Revel>
-                <div className="flex gap-4">
+                <div className="grid grid-cols-3 gap-1 md:flex md:gap-4">
                     {exp.stack.map((skill, index) => {
                         return (
                             <Badge key={index} className="w-fit text-lg" >{skill}</Badge>
@@ -63,39 +63,40 @@ export default function Expirience({ xps, education }: { xps: ExpType[], educati
     const { lang } = useLang();
     return (
         <div id="exp" className="min-h-full flex flex-col items-center justify-center gap-6">
-            <div className="w-2/3 flex items-center gap-4">
+
+            <div className="w-full px-4 md:px-0 md:w-2/3 flex items-center gap-4">
                 <Revel>
-                    <h1 className="font-black text-7xl">
+                    <h1 className="font-black text-5xl md:text-7xl">
                         {!lang ? "Experience" : "Experiência"}
                         <span className="text-primary">.</span>
                     </h1>
                 </Revel>
-                <div className="w-2/3 bg-[#313233] h-[2px]"></div>
+                <div className="md:w-2/3 w-[23%] bg-[#313233] h-[2px]"></div>
             </div>
 
-            <div className="w-2/3 flex flex-col flex-grow gap-4">
+            <div className="px-4 md:px-0 md:w-2/3 flex flex-col flex-grow gap-4">
                 {xps.map((exp, index) => (
                     <Exp key={index} exp={exp} />
                 ))}
             </div>
 
-            <div className="w-2/3 flex items-center gap-4">
+
+            <div className="w-full px-4 md:px-0 md:w-2/3 flex items-center gap-4">
                 <Revel>
-                    <h1 className="font-black text-7xl">
+                    <h1 className="font-black text-5xl md:text-7xl">
                         {!lang ? "Education" : "Educação"}
                         <span className="text-primary">.</span>
                     </h1>
                 </Revel>
-                <div className="w-2/3 bg-[#313233] h-[2px]"></div>
+                <div className="md:w-2/3 w-[23%] bg-[#313233] h-[2px]"></div>
             </div>
 
 
-            <div className="w-2/3 flex flex-col flex-grow gap-4">
+            <div className="px-4 md:px-0 md:w-2/3 flex flex-col flex-grow gap-4">
                 {education.map((exp, index) => (
                     <Exp key={index} exp={exp} />
                 ))}
             </div>
-
 
 
 
