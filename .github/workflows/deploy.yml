@@ -25,6 +25,7 @@ jobs:
           ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
             cd /home/andre/portifolio
             git pull origin main &&
+            make stop &&
             make build &&
             make run
           "
