@@ -8,6 +8,6 @@ build:
 
 run: 
 
-	sudo docker run -p 3000:3000 --name portfolio portfolio	
+	sudo docker run -d -p 3000:3000 --name portfolio portfolio	
 
 .PHONY: build run stop
