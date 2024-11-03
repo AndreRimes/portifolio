@@ -8,8 +8,17 @@ export const projects: ProjectType[] = [
         descriptionPt: "Um aplicativo de orçamento que permite criar e gerenciar seu orçamento, rastrear suas despesas e definir objetivos financeiros.",
         stack: ["Next.js", "Pocketbase", "React", "TailwindCSS", "Docker", "Jenkis"],
         gitHubLink: "https://github.com/AndreRimes/onABudget",
-        externalLink: "https://onabudget.vercel.app/",
+        externalLink: "https://onabudget.andrerimes.com/",
         imgPath: "/images/onAbudget.png"
+    },
+    {
+        title: "Portfolio",
+        descriptionEn: "A portfolio website that showcases my skills and experiences.",
+        descriptionPt: "Um site de portfolio que mostra minhas habilidades e experiências.",
+        stack: ["Next.js", "React", "TailwindCSS", "Framer-Motion", "Docker"],
+        gitHubLink: "https://github.com/AndreRimes/portifolio",
+        externalLink: "https://portifolio.andrerimes.com/",
+        imgPath: "/images/portfolio.png"
     },
     {
         title: "Assembly Risc V Gauntlet Game",
