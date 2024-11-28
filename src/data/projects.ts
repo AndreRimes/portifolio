@@ -30,7 +30,7 @@ export const projects: ProjectType[] = [
     },
     {
         title: "Selo Social",
-        descriptionEn: "Developed in CJR with a group of devlepers, a plataform for the company 'Selo Social' to help then manege their tasks of evaluating sustainable projects ",
+        descriptionEn: "Developed in CJR with a group of developers, a plataform for the company 'Selo Social' to help then manege their tasks of evaluating sustainable projects ",
         descriptionPt: "Desenvolvido em CJR com um grupo de desenvolvedores, uma plataforma para a empresa 'Selo Social' para ajudar a gerenciar suas tarefas de avaliar projetos sustentáveis",
         stack: ["Next.js", "Nestjs", "typescript", "ReactQuey", "prisma", "PostgreSQL"],
         externalLink: "https://selosocial.org/",

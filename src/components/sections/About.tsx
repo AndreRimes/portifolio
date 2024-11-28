@@ -20,7 +20,7 @@ export default function About() {
             <div className="md:w-2/3 md:px-0 px-4 w-full flex items-center gap-4">
                 <Revel>
                     <h1 className="font-black text-5xl md:text-7xl">
-                        About
+                        {lang ? "Sobre" : "About"}
                         <span className="text-primary">.</span>
                     </h1>
                 </Revel>

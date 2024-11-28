@@ -24,7 +24,7 @@ export default function Hero() {
           <p className="text-xl w-3/ md:text-xl md:w-2/3 font-extralight">
             {!lang ? `
             I've spent the last 2 years building some pretty cool software for companies, school and as a hobby.
-           Incase you got you intrested. Let's connect!
+           Incase you got intrested. Let's connect!
             `: "Eu passei os ultimos 2 anos construindo softwares legal para empresas, Universidade e como um hobby. Caso você tenha interesse. Vamos conectar!"}
           </p>
         </Revel>
