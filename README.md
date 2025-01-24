@@ -1,1 +1,1 @@
-https://portifolio.andrerimes.com/
+https://portfolio.andrerimes.com/
