@@ -22,6 +22,7 @@ jobs:
 
       - name: Push image using containerd
         run: |
+          ls -la /home/andre/
           cd /home/andre/portifolio &&
           git pull origin main &&
           sudo ctr --namespace portfolio-namespace images build --tag andrerimes/portfolio:latest . &&
