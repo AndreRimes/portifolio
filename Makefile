@@ -4,7 +4,7 @@ stop:
 
 build:
 
-	sudo docker build -t portfolio .	
+	sudo docker build -t portfolio:latest .
 
 run: 
 
