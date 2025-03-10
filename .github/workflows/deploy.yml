@@ -20,12 +20,13 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy to VPS
+      - name: Push image using containerd
         run: |
-          ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
-            cd /home/andre/portifolio &&
-            git pull origin main &&
-            make stop &&
-            make build &&
-            make run
-          "
+          cd /home/andre/portifolio &&
+          git pull origin main &&
+          sudo ctr --namespace portfolio-namespace images build --tag andrerimes/portfolio:latest . &&
+          sudo ctr --namespace portfolio-namespace images push --user ${{ secrets.DOCKER_USER }}:$${{ secrets.DOCKER_PASSWORD }} andrerimes/portfolio:latest
+
+      - name: Update Kubernetes deployment
+        run: |
+          kubectl rollout status deployment portfolio-deployment -n portfolio-namespace
