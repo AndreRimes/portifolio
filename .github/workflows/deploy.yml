@@ -20,12 +20,12 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Push image using containerd
+      - name: Build and Push image
         run: |
           ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
           cd /home/andre/portifolio &&
           git pull origin main &&
-          sudo ctr --namespace portfolio-namespace images build --tag andrerimes/portfolio:latest . &&
-          sudo ctr --namespace portfolio-namespace images push --user ${{ secrets.DOCKER_USER }}:$${{ secrets.DOCKER_PASSWORD }} andrerimes/portfolio:latest
+          sudo nerdctl build -t andrerimes/portfolio:latest . &&
+          sudo nerdctl push --user ${{ secrets.DOCKER_USER }}:${{ secrets.DOCKER_PASSWORD }} andrerimes/portfolio:latest &&
           kubectl rollout status deployment portfolio-deployment -n portfolio-namespace
           "
