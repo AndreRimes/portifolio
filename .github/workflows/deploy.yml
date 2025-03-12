@@ -24,9 +24,10 @@ jobs:
         run: |
           ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "
           cd /home/andre/portifolio &&
-          git pull origin main &&
+          git pull origin main && 
           echo '${{ secrets.DOCKER_PASSWORD }}' | sudo nerdctl login -u ${{ secrets.DOCKER_USER }} --password-stdin &&
           sudo nerdctl build -t andrerimes/portfolio:latest . &&
           sudo nerdctl push andrerimes/portfolio:latest &&
-          kubectl rollout status deployment portfolio-deployment -n portfolio-namespace
+          kubectl rollout restart deployment portfolio-deployment -n portfolio-namespace &&
+           kubectl rollout status deployment portfolio-deployment -n portfolio-namespace
           "
