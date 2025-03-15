@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Revel } from "../Revel";
 import { Button } from "../ui/button";
 import { useLang } from "@/context/useLang";
+import Link from "next/link";
 
 export default function Hero() {
   const { lang } = useLang()
@@ -34,7 +35,9 @@ export default function Hero() {
         </p>
         </Revel>
         <Revel>
-          <Button className="w-1/3 md:w-1/6 h-10 md:h-12 text-lg" variant={"default"}>{!lang ? "Contact Me" : "Contate-me"}</Button>
+          <Link href={"https://www.linkedin.com/in/andrerimes/"}>
+            <Button className="w-1/3 md:w-1/6 h-10 md:h-12 text-lg" variant={"default"}>{!lang ? "Contact Me" : "Contate-me"}</Button>
+          </Link>
         </Revel>
       </div>
       <Dots />
