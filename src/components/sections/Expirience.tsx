@@ -46,7 +46,7 @@ const Exp = ({ exp }: { exp: ExpType }) => {
             </Revel>
 
             <Revel>
-                <div className="grid grid-cols-3 gap-1 md:flex md:gap-4">
+                <div className="grid grid-cols-4 gap-2 ">
                     {exp.stack.map((skill, index) => {
                         return (
                             <Badge key={index} className="w-fit text-lg" >{skill}</Badge>

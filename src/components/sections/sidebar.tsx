@@ -32,7 +32,7 @@ function HorizontalBar() {
             }}
             initial="hidden"
             animate="variants"
-            className="w-screen flex items-center justify-between p-5 fixed z-10">
+            className="w-screen flex items-center justify-between p-5 fixed z-10 xl:ml-10">
             <div className="flex items-center justify-center gap-10 basis-[16%] md:px-20">
                 <Linkedin clasName="" />
                 <Github />
@@ -117,34 +117,34 @@ function VerticalBar() {
             }}
             initial="hidden"
             animate="variants"
-            className="md:flex flex-col w-[5%] h-full bg-black items-center gap-4 py-2 fixed z-50 hidden" >
+            className="md:flex flex-col xl:w-[7vw] w-[10vw] h-full bg-black items-center gap-4 py-2 fixed z-50 hidden" >
             <div
                 onClick={heroScroll}
-                className="cursor-pointer bg-[#111111] rounded-xl w-16 h-16 text-xl flex items-center justify-center p-0 font-extrabold">
+                className="cursor-pointer bg-[#111111] rounded-xl xl:w-16 xl:h-16 w-12 h-12 text-xl flex items-center justify-center p-0 font-extrabold">
                 A
                 <span className="text-primary">.</span>
             </div>
 
-            <div onClick={aboutScroll} className="w-[100px] flex items-center justify-center p-6 opacity-70
+            <div onClick={aboutScroll} className="w-[100px] xl:h-[7vw] h-[10vw] flex items-center justify-center  opacity-70
             hover:opacity-100 hover:bg-[#111111] hover:border-t hover:border-primary
             transition-all duration-300 rotate-90 cursor-pointer text-xl">
                 {!lang ? "About" : "Sobre"}
             </div>
 
-            <div onClick={projectsScroll} className="w-[100px] flex items-center justify-center p-6 opacity-70 
+            <div onClick={projectsScroll} className="w-[100px] xl:h-[7vw] h-[10vw] flex items-center justify-center opacity-70 
             hover:opacity-100 hover:bg-[#111111] hover:border-t hover:border-primary
             transition-all duration-300 rotate-90 cursor-pointer text-xl">
                 {!lang ? "Projects" : "Projetos"}
             </div>
 
-            <div onClick={expScroll} className="w-[100px] flex items-center justify-center p-6 opacity-70 
+            <div onClick={expScroll} className="w-[100px] xl:h-[7vw] h-[10vw] flex items-center justify-center opacity-70 
             hover:opacity-100 hover:bg-[#111111] hover:border-t hover:border-primary
             transition-all duration-300 rotate-90 cursor-pointer text-xl">
                 Exp
             </div>
 
 
-            <div onClick={contactScroll} className="w-[100px] flex items-center justify-center p-6 opacity-70 
+            <div onClick={contactScroll} className="w-[100px] xl:h-[7vw] h-[10vw] flex items-center justify-center opacity-70 
             hover:opacity-100 hover:bg-[#111111] hover:border-t hover:border-primary
             transition-all duration-300 rotate-90 cursor-pointer text-xl">
                 {!lang ? "Contact" : "Contato"}

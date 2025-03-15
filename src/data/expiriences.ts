@@ -7,10 +7,18 @@ export const xps: ExpType[] = [
         location: "Brasilia",
         time: "Mar. 2023 - Present",
         stack: ["Next.js", "React", "Typescript", "Node.js", "PostgreSQL", "Nestjs", "MUI", "TailwindCSS", "Vercel", "AWS"],
-        descriptionEn: 'In CJR I first participated in the trenee process to enter the company.Due to my noticeble performace I was alocated in the biggest and most complex project of the company "Selo Social"(project can be seen in project tab), where I am resposible to this day to full stack develop this plataform.',
-        descriptionPt: 'Na CJR eu participei do processo de trenee para entrar na empresa. Devido a minha performance notável, fui alocado no projeto mais complexo e mais importante da empresa "Selo Social" (projeto pode ser visto na aba de projetos), onde estou responsável atualmente a desenvolver este plataforma.',
+        descriptionEn: 'At CJR, I initially participated in the trainee program. Due to my outstanding performance, I was assigned to the company\'s largest and most complex project, "Selo Social" (which can be viewed in the projects tab). I continue to work as a full-stack developer on this platform, contributing to its development and maintenance.',
+        descriptionPt: 'Na CJR, inicialmente participei do processo trainee. Devido ao meu desempenho excepcional, fui designado para o projeto mais complexo e importante da empresa, o "Selo Social" (que pode ser visto na aba de projetos). Atualmente, continuo atuando como desenvolvedor full-stack nesta plataforma, contribuindo para seu desenvolvimento e manutenção.',
+    },
+    {
+        name: "Hex360",
+        position: "Full Stack Software Developer",
+        location: "Brasilia",
+        time: "Mar. 2025 - Present",
+        stack: ["Vuejs", "Typescript", "Django", "Django Rest Framework", "PostgreSQL"],
+        descriptionEn: "At Hex360, I work as a full-stack developer responsible for both backend and frontend development of a geoprocessing and remote sensing platform. This position has given me the opportunity to work with large-scale codebases and complex architectures, including microservices.",
+        descriptionPt: "Na Hex360, atuo como desenvolvedor full-stack responsável pelo desenvolvimento backend e frontend de uma plataforma de geoprocessamento e sensoriamento remoto. Esta posição me permite trabalhar com bases de código extensas e arquiteturas complexas, incluindo microserviços.",
     }
-
 ]
 
 export const education: ExpType[] = [
@@ -19,18 +27,17 @@ export const education: ExpType[] = [
         position: "Bachelor of Science in Computer Science",
         location: "Chicago, IL",
         time: "Aug. 2023 - Mar. 2024",
-        descriptionEn: "Study two semesters of Cumputer Science at UIC. Where i learned fundamentals of Computer Science and how to develop software. Participated in the Computer Science club (ACM) where i deepened my knowledge of the subject.",
-        descriptionPt: "Estudei dois semesters de Ciência da Computação na UIC. Onde aprendi os fundamentos da Ciência da Computação e desenvolvimento de software. Participei do clube de Ciência da Computação (ACM) onde eu aprendi mais sobre o assunto.",
-        stack: [""]
-    }, 
+        descriptionEn: "Completed two semesters studying Computer Science at UIC, where I learned fundamental concepts and software development practices. Active member of the Association for Computing Machinery (ACM) club, which helped deepen my understanding of computer science.",
+        descriptionPt: "Completei dois semestres de Ciência da Computação na UIC, onde aprendi conceitos fundamentais e práticas de desenvolvimento de software. Fui membro ativo do clube Association for Computing Machinery (ACM), o que me ajudou a aprofundar meu conhecimento na área.",
+        stack: []
+    },
     {
         name: "Universidade de Brasília (UnB)",
         position: "Bachelor of Science in Computer Science",
         location: "Brasilia, DF",
-        time: "Mar.2023 - Ago. 2023 && Mar. 2024 - Atualmente",
-        descriptionEn: "I am currently studying at UnB. Where i am learning complex and fundamental topics of Computer Science and Math. I also particpipating in the Junior Company(CJR) where i am ganing work experience and learning new things.",
-        descriptionPt: "Atualmente estou estudando na UnB. Onde estou aprendendo tópicos complexos e fundamentais da Ciência da Computação e Matemática. Também participei do Empresa Junior (CJR) onde estou ganhando experiência de trabalho e aprendendo novos assuntos.",
-        stack: [""]
+        time: "Mar. 2023 - Aug. 2023 && Mar. 2024 - Present",
+        descriptionEn: "Currently pursuing my Computer Science degree at UnB, focusing on complex and fundamental topics in Computer Science and Mathematics. Active member of the Junior Enterprise (CJR), where I gain practical work experience and continue to expand my knowledge.",
+        descriptionPt: "Atualmente cursando Ciência da Computação na UnB, com foco em tópicos complexos e fundamentais de Computação e Matemática. Membro ativo da Empresa Júnior (CJR), onde obtenho experiência prática de trabalho e continuo expandindo meus conhecimentos.",
+        stack: []
     }
-
 ]

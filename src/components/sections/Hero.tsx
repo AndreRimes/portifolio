@@ -21,12 +21,17 @@ export default function Hero() {
           </h2>
         </Revel>
         <Revel>
-          <p className="text-xl w-3/ md:text-xl md:w-2/3 font-extralight">
-            {!lang ? `
-            I've spent the last 2 years building some pretty cool software for companies, school and as a hobby.
-           Incase you got intrested. Let's connect!
-            `: "Eu passei os ultimos 2 anos construindo softwares legal para empresas, Universidade e como um hobby. Caso você tenha interesse. Vamos conectar!"}
-          </p>
+        <p className="text-xl w-3/ md:text-xl md:w-2/3 font-extralight">
+          {!lang ? `
+            I've spent the last 2 years building pretty cool software for companies, school and as a hobby. 
+            I'm also passionate about Infrastructure and DevOps Engineering. 
+            In case you're interested, let's connect!
+          ` : `
+            Eu passei os ultimos 2 anos construindo softwares legal para empresas, Universidade e como um hobby. 
+            Também sou apaixonado por Engenharia de Infraestrutura e DevOps. 
+            Caso você tenha interesse, vamos conectar!
+          `}
+        </p>
         </Revel>
         <Revel>
           <Button className="w-1/3 md:w-1/6 h-10 md:h-12 text-lg" variant={"default"}>{!lang ? "Contact Me" : "Contate-me"}</Button>

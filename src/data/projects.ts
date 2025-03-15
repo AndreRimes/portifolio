@@ -6,7 +6,7 @@ export const projects: ProjectType[] = [
         title: "onABudget",
         descriptionEn: "A budgeting app that allows you to create and manage your budget, track your expenses, and set financial goals.",
         descriptionPt: "Um aplicativo de orçamento que permite criar e gerenciar seu orçamento, rastrear suas despesas e definir objetivos financeiros.",
-        stack: ["Next.js", "Pocketbase", "React", "TailwindCSS", "Docker", "Jenkis"],
+        stack: ["Next.js", "Pocketbase", "React", "TailwindCSS", "Docker", "Kubernetes",],
         gitHubLink: "https://github.com/AndreRimes/onABudget",
         externalLink: "https://onabudget.andrerimes.com/",
         imgPath: "/images/onAbudget.png"
@@ -15,9 +15,9 @@ export const projects: ProjectType[] = [
         title: "Portfolio",
         descriptionEn: "A portfolio website that showcases my skills and experiences.",
         descriptionPt: "Um site de portfolio que mostra minhas habilidades e experiências.",
-        stack: ["Next.js", "React", "TailwindCSS", "Framer-Motion", "Docker"],
+        stack: ["Next.js", "React", "TailwindCSS", "Framer-Motion", "Docker", "Kubernetes"],
         gitHubLink: "https://github.com/AndreRimes/portifolio",
-        externalLink: "https://portifolio.andrerimes.com/",
+        externalLink: "https://portfolio.andrerimes.com/",
         imgPath: "/images/portfolio.png"
     },
     {
