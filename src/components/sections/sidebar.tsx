@@ -40,7 +40,7 @@ function HorizontalBar() {
 
             <div className="flex items-center justify-evenly gap-2 basis-1/2 md:basis-1/4">
                 <Link
-                    href={"https://drive.google.com/file/d/1_lPGfAz602WG2xaLqollhH6Z5PRJ4mDD/view?usp=sharing"}
+                    href={"https://drive.google.com/file/d/1V7O2B4q699jAzqhnII3jezrhKEnJskDG/view?usp=sharing"}
                     target="_blank"
                 >
                     <Button variant={'outline'}>{!lang ? "My Resume" : "Meu Currículo"}</Button>
