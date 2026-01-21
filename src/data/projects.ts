@@ -12,6 +12,14 @@ export const projects: ProjectType[] = [
         imgPath: "/images/onAbudget.png"
     },
     {
+        title: "Rustainer",
+        descriptionEn: "A container runtime written in Rust that manages the lifecycle of containers, including pulling images from Docker Hub, filesystem layering, and network isolation using namespaces.",
+        descriptionPt: "Uma runtime de contêiner escrita em Rust que gerencia o ciclo de vida de contêineres, incluindo o download de imagens do Docker Hub, camadas de sistema de arquivos e isolamento de rede via namespaces.",
+        stack: ["Rust", "Tokio", "Docker API", "Linux Namespaces", "Iptables"],
+        gitHubLink: "https://github.com/AndreRimes/rustainer",
+        imgPath: "/images/rustainer.png" 
+    },
+    {
         title: "Portfolio",
         descriptionEn: "A portfolio website that showcases my skills and experiences.",
         descriptionPt: "Um site de portfolio que mostra minhas habilidades e experiências.",
@@ -27,6 +35,24 @@ export const projects: ProjectType[] = [
         stack: ["Assembly RISC-V", "RARS IDE"],
         imgPath: "/images/gauntlet.png",
         gitHubLink: "https://github.com/AndreRimes/Gauntlet-Replica",
+    },
+    {
+        title: "BidNow",
+        descriptionEn: "A real-time auction platform built with Next.js and NestJS, featuring live bidding via WebSockets and a recommendation microservice based on word embeddings derived from product tags and user bidding history.",
+        descriptionPt: "Uma plataforma de leilões em tempo real construída com Next.js e NestJS, com lances ao vivo via WebSocket e um microserviço de recomendação baseado em word embeddings das tags dos produtos e no histórico de lances do usuário.",
+        stack: [
+            "Next.js",
+            "NestJS",
+            "WebSocket",
+            "TypeScript",
+            "PostgreSQL",
+            "Docker",
+            "Kubernetes",
+            "Word Embeddings",
+            "Microservices"
+        ],
+        gitHubLink: "https://github.com/AndreRimes/BidNowFront",
+        imgPath: "/images/bidnow.png"
     },
     {
         title: "Selo Social",
