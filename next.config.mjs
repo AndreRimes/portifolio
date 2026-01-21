@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // <-- isso garante export mesmo no App Router
+  output: "standalone", // <-- for Docker deployment with Node.js server
 };
 
 export default nextConfig;
-
-
