@@ -75,6 +75,23 @@ jobs:
           mkdir -p $HOME/.kube
           echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > $HOME/.kube/config
           chmod 600 $HOME/.kube/config
+          
+      - name: Debug network connectivity
+        run: |
+          echo "=== Tailscale Status ==="
+          tailscale status
+          echo ""
+          echo "=== Testing connection to Kubernetes API ==="
+          kubectl config view
+          echo ""
+          echo "=== Cluster info ==="
+          kubectl cluster-info || true
+          echo ""
+          echo "=== Ping Kubernetes server ==="
+          ping -c 3 100.97.106.77 || true
+          echo ""
+          echo "=== Test curl to API ==="
+          curl -k https://100.97.106.77:6443/version || true
 
       - name: Restart deployment to pull new image
         run: |
