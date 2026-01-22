@@ -1,11 +1,11 @@
-import { Button } from "../ui/button"
-import { Select, SelectItem, SelectContent, SelectTrigger, SelectValue } from "../ui/select"
-import { US, BR } from 'country-flag-icons/react/3x2'
-import Linkedin from "@/icons/linkedin"
-import Github from "@/icons/github"
 import { useLang } from "@/context/useLang"
-import Link from "next/link"
+import Github from "@/icons/github"
+import Linkedin from "@/icons/linkedin"
+import { BR, US } from 'country-flag-icons/react/3x2'
 import { motion } from "framer-motion"
+import Link from "next/link"
+import { Button } from "../ui/button"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../ui/select"
 
 
 
