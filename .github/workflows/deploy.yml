@@ -52,20 +52,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Debug Tailscale credentials
-        run: |
-          echo "Client ID length: ${#TAILSCALE_CLIENT_ID}"
-          echo "Client Secret length: ${#TAILSCALE_SECRET}"
-          echo "Client ID first 10 chars: ${TAILSCALE_CLIENT_ID:0:10}"
-        env:
-          TAILSCALE_CLIENT_ID: ${{ secrets.TAILSCALE_OAUTH_CLIENT_ID }}
-          TAILSCALE_SECRET: ${{ secrets.TAILSCALE_OAUTH_CLIENT_SECRET }}
-
       - name: Connect to Tailscale
         uses: tailscale/github-action@v2
         with:
-          oauth-client-id: ${{ secrets.TAILSCALE_OAUTH_CLIENT_ID }}
-          oauth-secret: ${{ secrets.TAILSCALE_OAUTH_CLIENT_SECRET }}
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
 
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
