@@ -1,8 +1,8 @@
+import { useLang } from "@/context/useLang";
+import Link from "next/link";
 import { useState } from "react";
 import { Revel } from "../Revel";
 import { Button } from "../ui/button";
-import { useLang } from "@/context/useLang";
-import Link from "next/link";
 
 export default function Hero() {
   const { lang } = useLang()
@@ -18,7 +18,7 @@ export default function Hero() {
         <Revel>
           <h2 className="text-2xl md:text-3xl font-normal">
             {!lang ? "I'm a " : "Eu sou um "}
-            <span className="text-primary font-bold">Full Stack Developer</span>
+            <span className="text-primary font-bold">Full Stack Developerrrrrrrrr</span>
           </h2>
         </Revel>
         <Revel>
