@@ -1,4 +1,4 @@
-name: Build and Deploy to Homelab
+name: Build and Push Portfolio Image
 
 on:
   push:
@@ -8,7 +8,6 @@ on:
 
 env:
   DOCKER_IMAGE: andrerimes/portfolio
-  KUBE_NAMESPACE: portfolio-namespace
 
 jobs:
   build-and-push:
@@ -44,61 +43,3 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=registry,ref=${{ env.DOCKER_IMAGE }}:buildcache
           cache-to: type=registry,ref=${{ env.DOCKER_IMAGE }}:buildcache,mode=max
-
-  deploy:
-    needs: build-and-push
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Connect to Tailscale
-        run: |
-          echo "Auth key length: ${#TS_AUTHKEY}"
-          if [ -z "$TS_AUTHKEY" ]; then
-            echo "ERROR: TAILSCALE_AUTHKEY secret is not set!"
-            exit 1
-          fi
-          curl -fsSL https://tailscale.com/install.sh | sh
-          sudo tailscale up --authkey="${TS_AUTHKEY}" --accept-routes --hostname="github-runner-${{ github.run_id }}"
-          tailscale status
-        env:
-          TS_AUTHKEY: ${{ secrets.TAILSCALE_AUTHKEY }}
-
-      - name: Set up kubectl
-        uses: azure/setup-kubectl@v3
-        with:
-          version: 'latest'
-
-      - name: Configure kubectl
-        run: |
-          mkdir -p $HOME/.kube
-          echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > $HOME/.kube/config
-          chmod 600 $HOME/.kube/config
-          
-      - name: Debug network connectivity
-        run: |
-          echo "=== Tailscale Status ==="
-          tailscale status
-          echo ""
-          echo "=== Testing connection to Kubernetes API ==="
-          kubectl config view
-          echo ""
-          echo "=== Cluster info ==="
-          kubectl cluster-info || true
-          echo ""
-          echo "=== Ping Kubernetes server ==="
-          ping -c 3 100.97.106.77 || true
-          echo ""
-          echo "=== Test curl to API ==="
-          curl -k https://100.97.106.77:6443/version || true
-
-      - name: Restart deployment to pull new image
-        run: |
-          kubectl rollout restart deployment/portfolio-deployment -n ${{ env.KUBE_NAMESPACE }}
-          kubectl rollout status deployment/portfolio-deployment -n ${{ env.KUBE_NAMESPACE }}
-
-      - name: Verify deployment
-        run: |
-          kubectl get pods -n ${{ env.KUBE_NAMESPACE }}
-          kubectl get services -n ${{ env.KUBE_NAMESPACE }}
