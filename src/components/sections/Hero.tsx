@@ -18,7 +18,7 @@ export default function Hero() {
         <Revel>
           <h2 className="text-2xl md:text-3xl font-normal">
             {!lang ? "I'm a " : "Eu sou um "}
-            <span className="text-primary font-bold">Full Stack Developerrrrrrrrr Teste teste</span>
+            <span className="text-primary font-bold">Full Stack Developer</span>
           </h2>
         </Revel>
         <Revel>
