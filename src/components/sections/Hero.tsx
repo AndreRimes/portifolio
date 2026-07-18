@@ -30,7 +30,7 @@ export default function Hero() {
           ` : `
             Eu passei os ultimos 2 anos construindo softwares legal para empresas, Universidade e como um hobby. 
             Também sou apaixonado por Engenharia de Infraestrutura e DevOps. 
-            Caso você tenha interesse, vamos conectar!
+            Caso você tenha interesse, vamos conectar!!!!!!!!!!!!
           `}
         </p>
         </Revel>
